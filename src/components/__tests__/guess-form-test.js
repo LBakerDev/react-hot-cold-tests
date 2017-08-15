@@ -21,6 +21,6 @@ it('Should reset the input when the form is submitted', () => {
     const wrapper = mount(<GuessForm />);
     const input = wrapper.find('input[type="text"]');
     input.node.value =  10;
-    wrappers.simulate('submit');
+    wrapper.simulate('submit');
     expect(input.node.value).toEqual('');
 });
